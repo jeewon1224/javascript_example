@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나는 무슨 띠일까?</title>
+  <script defer>
+    let year=prompt(); //브라우저 프롬프트 창에 년도 입력하게 함
+    const zodiac=['원숭이','닭','개','돼지','쥐','소','호랑이','토끼','용','뱀','말','양'];
+    
+    console.log(year); //콘솔창에 프롬프트에 입력했던 값 뜨게 함 
+    document.write("당신은 " + zodiac[year % 12] + "띠 입니다.");
+
+    // console.log(1994 % 12);
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

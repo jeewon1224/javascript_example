@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer>
+
+    // 배열에 사용할 수 있는 자료형
+    // 배열에 사용할 수 있는 요소는 모든 자료형이다.
+    const numbers=[1, 2, 3, 4, 5];
+    console.log(numbers);
+    
+    // 배열 요소 갯수 확인
+    console.log(numbers.length);
+
+    // 배열 요소 접근
+    console.log([numbers[0]]);
+
+    for(let i = 0; i<numbers.length; i++){
+      console.log(numbers[i]);
+    }
+
+
+
+
+
+    // 배열 요소 추가
+    numbers.push(100); // 기존의 배열에 100이라는 숫자를 추가함
+    console.log(numbers); 
+
+    numbers[6]=200; //200이라는 숫자 추가
+    console.log(numbers);
+
+    //배열 인덱스 뛰어넘기 --> 빈 인덱스는 empty로 표시
+    numbers[10]=300;
+    console.log(numbers);
+
+    // 특정 위치에 배열 추가 : array.splice(index, delete할 요소 인덱스 번호, add할);
+    const strings=["a", "b","c","d","e"];
+    strings.splice(1,1); //1번째 요소 하나를 지워준다
+    console.log(strings);   //--> 1번쨰 요소인 b가 사라짐
+
+
+    //index번째의 요소를, delete할 갯수, add를 추가
+    strings.splice(1, 1, "x"); //1번째 요소를 1개 삭제하고 그 대신 x를 추가한다
+    console.log(strings); 
+
+    strings.splice(1, 0, "y", "z"); //0을 넣으면 삭제되지 않고 지정한 인덱스의 자리부터 추가만 된다
+    console.log(strings); 
+    
+
+
+
+
+    // map 메서드: 배열에 있는 모든 요소에 특정 기능을 실행 시키는 메서드
+    // let numbersSqrt=numbers.map(function(x){
+    //   return x * x; 
+    // });
+
+    let numbersSqrt = numbers.map((x) => x * x);
+
+    console.log(numbersSqrt);
+
+    //화살표 함수의 예
+
+      // 1. 선언적 함수
+    // function sumNum(a, b){
+    //   return a+b;
+    // }
+    // console.log(sumNum(5,7));
+
+
+      //2. 익명 함수
+    // let sumNum = function(a,b){
+    //   return a+b;
+    // }
+    // console.log(sumNum(5,7));
+
+
+        // 3.화살표 함수 : 여러줄의 저으이 코드를 쓸 경우 잘 사용하지 않는다.
+      let sumNum=(a,b) =>{
+        return a+b;
+      }
+    console.log(sumNum(5,7));
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
